@@ -35,6 +35,9 @@
   ],
   "C_Cpp_Runner.useAddressSanitizer": false,
   "files.associations": {
-    "type_traits": "c"
+    "type_traits": "c",
+    "value_type.h": "c",
+    "array": "c",
+    "utility": "c"
   }
 }
