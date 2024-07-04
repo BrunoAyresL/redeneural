@@ -135,11 +135,11 @@ void update_parameters(nn* n_net, double l_rate) {
     for (int i = 0; i < n_net->n_layers; i++) {
         for (int j = 0; j < n_net->layers[i].n_neurons; j++) {   
             value* bias = n_net->layers[i].neurons[j].bias; 
-            bias->data += -l_rate * bias->grad;
+            bias->data += -l_rate * bias->grad + 0.00001;
     
             for (int k = 0; k < n_net->layers[i].neurons[j].n_inputs; k++) {  
                 value* weight = n_net->layers[i].neurons[j].weights[k];
-                weight->data += -l_rate * weight->grad;
+                weight->data += -l_rate * weight->grad + 0.00001;
 
             }
 
